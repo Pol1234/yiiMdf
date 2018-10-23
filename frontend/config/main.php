@@ -37,10 +37,12 @@ return [
             'errorAction' => 'site/error',
         ],
         
-        'urlManager' => [
+       'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'class' => 'yii\web\UrlManager',
             'rules' => [
+                '<alias:\w+>' => 'site/<alias>',
             ],
         ],
         
